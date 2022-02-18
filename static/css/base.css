@@ -1,0 +1,88 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/closet-blurry.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Roboto';
+    opacity: 0.7;
+}
+
+.img {
+    filter: grayscale(100%);
+}
+
+
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.text-logo {
+    text-transform: uppercase;
+}
+
+.linked-logo {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #FF00FF;
+    color: white;
+    min-width: 260px;
+}
+
+.button-fusia {
+    background: #FF00FF;
+    color: white;
+}
+
+.buy-button:hover,
+.buy-button:active,
+.buy-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-fusia {
+    color: #FF00FF;
+}
+
+.border-fusia {
+    border: 1px solid #FF00FF;
+}
+
+/* ............................................... Media Queries */
+
+
+/* Bigger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar - medium and larger */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
