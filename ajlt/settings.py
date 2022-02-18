@@ -1,4 +1,4 @@
-import os 
+import os
 
 """
 Django settings for ajlt project.
