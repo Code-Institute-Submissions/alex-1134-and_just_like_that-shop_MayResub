@@ -16,9 +16,7 @@ class Item(models.Model):
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=100)
-    colour = models.TextField()
     
-    vintage = models.TextField()
     description = models.TextField()
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=100, null=True, blank=True)
