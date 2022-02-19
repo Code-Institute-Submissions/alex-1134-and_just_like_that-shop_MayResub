@@ -23,16 +23,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Item',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image_url', models.URLField(blank=True, max_length=2000, null=True)),
-                ('image', models.ImageField(blank=True, null=True, upload_to='')),
-                ('name', models.CharField(max_length=100)),
-                
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('sku', models.CharField(blank=True, max_length=254, null=True)),
+                ('name', models.CharField(max_length=254)),
                 ('description', models.TextField()),
-                ('sku', models.CharField(blank=True, max_length=100, null=True)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
+                ('price', models.DecimalField(decimal_places=2, max_digits=6)),
                 ('rating', models.DecimalField(blank=True, decimal_places=2, max_digits=6, null=True)),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='items.category')),
+                ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
+                ('image', models.ImageField(blank=True, null=True, upload_to='')),
+                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='items.Category')),
             ],
         ),
     ]
