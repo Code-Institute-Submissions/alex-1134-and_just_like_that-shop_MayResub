@@ -40,4 +40,19 @@ class Migration(migrations.Migration):
             name='sku',
             field=models.CharField(blank=True, max_length=100, null=True),
         ),
+        migrations.AlterField(
+            model_name='item',
+            name='vintage',
+            field=models.TextField(null=True),
+        ),
+        migrations.AlterField(
+            model_name='item',
+            name='colour',
+            field=models.TextField(null=True),
+        ),
+        migrations.AlterField(
+            model_name='item',
+            name='size',
+            field=models.TextField(null=True),
+        ),
     ]

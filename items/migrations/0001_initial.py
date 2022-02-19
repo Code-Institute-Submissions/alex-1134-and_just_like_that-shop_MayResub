@@ -32,6 +32,9 @@ class Migration(migrations.Migration):
                 ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
                 ('image', models.ImageField(blank=True, null=True, upload_to='')),
                 ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='items.Category')),
+                ('vintage', models.TextField()),
+                ('size', models.TextField()),
+                ('colour', models.TextField()),
             ],
         ),
     ]
