@@ -17,7 +17,7 @@ class Item(models.Model):
     image = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=100)
     colour = models.TextField()
-    size = models.TextField()
+    
     vintage = models.TextField()
     description = models.TextField()
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
