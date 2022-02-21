@@ -1,14 +1,34 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Item
-
+from .models import Item, Category
 
 
 def all_items(request):
 
     items = Item.objects.all()
     query = None
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                items = items.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            items = items.order_by(sortkey)
+            
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            items = items.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
         if 'q' in request.GET:
