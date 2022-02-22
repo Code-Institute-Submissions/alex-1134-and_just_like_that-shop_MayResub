@@ -14,7 +14,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="closet-font">The Closet <i class="fa-solid fa-circle-heart"></i></h2>
+                <h3 class="closet-font">The Closet <i class="fas fa-heart"></i></h3>
+                {% for c in current_categories %}
+                    <a class="category-badge text-decoration-none" href="{% url 'items' %}?category={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-fusia rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -32,8 +37,19 @@
                                 <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                
+                                
                             </select>
                         </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'items' %}">The Closet</a> | </span>
+                            {% endif %}
+                            {{ items|length }} Items{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
                     </div>
 
         <!-- iteration through items variable-->
@@ -63,7 +79,7 @@
                                             {% if item.category %} 
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'items' %}?category={{ item.category.name }}">
-                                                    <i class="fas fa-scissors mr-1">{{ item.category.friendly_name }}</i>
+                                                    <i class="fas fa-tags mr-1"> {{ item.category.friendly_name }}</i>
                                                 </a>
                                             </p>
                                             {% endif %} 
@@ -108,5 +124,43 @@
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-fusia mx-auto my-auto"></i>
+        </a>	
+    </div>
     
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <!-- from Code Institute tutorial  -->
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

@@ -63,6 +63,11 @@ body {
 	z-index: -1;	
 }
 
+a.category-badge > span.badge:hover {
+    background: #af0054;
+    color: white;
+}
+
 .text-fusia {
     color: #FF00FF;
 }
@@ -71,10 +76,26 @@ body {
     border: 1px solid #FF00FF;
 }
 
+.border-black {
+    border: 1px solid black; /* working??? */
+}
+
 .ajlt {
     font-weight: 900;
 }
 
+.btt-link {
+    cursor: auto;
+}
+
+.btt-button {
+    position: fixed;
+    right: 15px; 
+    bottom:15px;
+    height: 40px;
+    width: 40px;
+
+}
 /* ............................................... Media Queries */
 
 
