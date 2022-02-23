@@ -28,8 +28,11 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="item-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ item.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ item.price }}</p> 
+                    <p class="mb-0 item-name">{{ item.name }}</p>
+                    <p class="mb-0 item-size">Size: {{ item.size }}</p>
+                    <p class="mb-0 item-vintage">Vintage - {{ item.vintage }}</p>
+                    <p class="mb-0 item-colour">Main colour: {{ item.colour }}</p>
+                    <p class="lead item-price mb-0 text-left font-weight-bold">{{ item.price }} SEK</p> 
                     {% if item.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'items' %}?category={{ item.category.name }}">

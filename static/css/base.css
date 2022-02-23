@@ -55,8 +55,33 @@ body {
 
 .btn-outline-fusia {
     border: 1px solid black;
-    background: black;
+    background: white;
     color: #FF00FF !important;  
+}
+
+/* ................................. Item details */
+
+.item-name {
+    font-size: 120% !important;
+    font-weight: 900 !important;
+    color: black !important;
+}
+
+.item-size {
+    color: #2F3B62;
+}
+
+.item-vintage {
+    color: white;
+}
+
+.item-colour {
+    color: black;
+}
+
+.item-price {
+    font-weight: 900;
+    color: #FF00FF;
 }
 
 .layer {
