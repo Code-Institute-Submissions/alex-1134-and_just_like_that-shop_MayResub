@@ -53,6 +53,12 @@ body {
     color: white;
 }
 
+.btn-outline-fusia {
+    border: 1px solid black;
+    background: black;
+    color: #FF00FF !important;  
+}
+
 .layer {
     background: #D8BFD8;
     position: fixed;
