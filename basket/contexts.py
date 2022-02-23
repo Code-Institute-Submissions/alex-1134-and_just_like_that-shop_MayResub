@@ -21,7 +21,7 @@ def basket_contents(request):
             'item': item,
         })
 
-    delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE)
+    delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
 
     grand_total = delivery + total
 
@@ -29,7 +29,7 @@ def basket_contents(request):
         'basket_items': basket_items,
         'total': total,
         'item_count': item_count,
-        'delivery': delivery,
+        'delivery': delivery,  # ZMieN TUTAJ
         'grand_total': grand_total,
         }
 
