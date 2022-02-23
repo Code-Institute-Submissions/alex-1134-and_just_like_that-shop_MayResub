@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 
 def view_basket(request):
@@ -22,3 +22,12 @@ def add_to_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(redirect_url)
+
+    
+def item_removal(request, item_id):
+    """Remove item from basket"""
+
+    view_basket.delete(item_id)
+
+    request.session['basket'] = view_basket
+    return HttpResponse(status=200)

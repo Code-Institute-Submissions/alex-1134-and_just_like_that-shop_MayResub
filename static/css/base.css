@@ -35,6 +35,10 @@ body {
     font-weight: 900;
 }
 
+.txt-blk {
+    color: black !important;
+}
+
 .font-awesome {
     height: 2rem;
     width: 2rem;
