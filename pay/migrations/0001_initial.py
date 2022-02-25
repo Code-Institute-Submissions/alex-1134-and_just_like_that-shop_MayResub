@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('phone_number', models.CharField(max_length=20)),
                 ('country', models.CharField(max_length=40)),
                 ('postcode', models.CharField(blank=True, max_length=20, null=True)),
-                ('town_or_city', models.CharField(max_length=40)),
+                ('city', models.CharField(max_length=40)),
                 ('street_address1', models.CharField(max_length=80)),
                 ('street_address2', models.CharField(blank=True, max_length=80, null=True)),
                 ('county', models.CharField(blank=True, max_length=80, null=True)),
