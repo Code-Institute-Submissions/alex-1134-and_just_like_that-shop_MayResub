@@ -63,6 +63,21 @@ body {
     color: #FF00FF !important;  
 }
 
+.message-box {
+    z-index: 9999;
+    right: 20px;
+    top: 70px;
+    position: fixed;
+}
+
+.toast-cheers {
+    overflow: visible;
+}
+
+.toast-cap {
+    height: 4px ;
+}
+
 /* ................................. Item details */
 
 .item-name {
