@@ -1,9 +1,6 @@
 {
-    "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
-    ],
-
-    "[python]": {
-
-    }
+    "settings": "",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "redhat.telemetry.enabled": true,
+    "gitpod.openInStable.neverPrompt": true
 }
