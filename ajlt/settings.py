@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'items',
     'basket',
     'pay',
-
     'crispy_forms',
 
 ]
@@ -64,7 +63,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ajlt.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

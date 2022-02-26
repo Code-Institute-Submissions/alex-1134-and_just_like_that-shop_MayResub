@@ -34,7 +34,7 @@
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-                {% for item in bag_items %}
+                {% for item in basket_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
                             <a href="{% url 'item_detail' item.item.id %}">
@@ -69,22 +69,21 @@
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Fill in to finish the order:</p>
-                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                <form action="{% url 'pay' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-fusia px-2 w-auto">Details</legend>
-                        {{ order_form.full_name | as_crispy_field }}
-                        {{ order_form.email | as_crispy_field }}
+                        {{ new_form.full_name | as_crispy_field }}
+                        {{ new_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-fusia px-2 w-auto">Delivery</legend>
-                        {{ order_form.country | as_crispy_field }}
-                       <!-- {{ order_form.city | as_crispy_field }} -->
-                        {{ order_form.postcode | as_crispy_field }}
-                        {{ order_form.street_address1 | as_crispy_field }}
-                        {{ order_form.street_address2 | as_crispy_field }}
-                        {{ order_form.county | as_crispy_field }}
-                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ new_form.phone_number | as_crispy_field }}
+                        {{ new_form.street_address1 | as_crispy_field }}
+                        {{ new_form.street_address2 | as_crispy_field }}
+                        {{ new_form.county | as_crispy_field }}
+                        {{ new_form.postcode | as_crispy_field }}
+                        {{ new_form.country | as_crispy_field }}    
                         
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
