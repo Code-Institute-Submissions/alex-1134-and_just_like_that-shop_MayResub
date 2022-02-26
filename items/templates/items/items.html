@@ -16,7 +16,7 @@
             <div class="col text-center mt-3">
                 <h3 class="closet-font">The Closet <i class="fas fa-heart"></i></h3>
                 {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'items' %}?category={{ c.name }}">
+                    <a class="category-badge text-decoration-none" >
                         <span class="p-2 mt-2 badge badge-white text-fusia rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
