@@ -86,24 +86,24 @@
                         {{ new_form.country | as_crispy_field }}    
                         
                         <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save my info for later</label>
+							                        {% if user.is_authenticated %}
+								                            <label class="form-check-label" for="id-save-info">Save my info for later</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
+							                        {% else %}
+								                            <label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
-							{% endif %}
+							                        {% endif %}
 						</div>
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-fusia px-2 w-auto">Payment</legend>
-                        <!-- A Stripe card element will go here -->
+                        <!-- Stripe card element -->
                         <div class="mb-3" id="card-element"></div>
-
-                        <!-- Used to display form errors -->
+                        <!-- Errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
