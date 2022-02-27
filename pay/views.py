@@ -1,8 +1,10 @@
-from django.shortcuts import render, reverse, redirect
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
 from .forms import NewForm
+from .models import Order, OrderLineItem
+from items.models import Item
 from basket.contexts import basket_contents
 
 import stripe
@@ -12,30 +14,97 @@ def pay(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    basket = request.session.get('basket', {})
-    if not basket:
-        messages.error(request, "Your basket is empty :(")
-        return redirect(reverse('items'))
+    if request.method == 'POST':
+        basket = request.session.get('basket', {})
 
-    current_basket = basket_contents(request)
-    total = current_basket['grand_total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
-        amount=stripe_total,
-        currency=settings.STRIPE_CURRENCY,
-    )
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'county': request.POST['county'],
+        }
+        new_form = NewForm(form_data)
+        if new_form.is_valid():
+            order = new_form.save()
+            for item_id, item_data in basket.items():
+                try:
+                    item = Item.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            item=item,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+                    else:
+                        for quantity in item_data.items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                item=item,
+                                quantity=quantity,
+                            )
+                            order_line_item.save()
+                except Item.DoesNotExist:
+                    messages.error(request, (
+                        "Item not found."
+                        "Please email us for help!")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_basket'))
 
-    new_form = NewForm()
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('pay_done', args=[order.order_number]))
+        else:
+            messages.error(request, 'ERROR! Please double check your information.')
+    else:
+        basket = request.session.get('basket', {})
+        if not basket:
+            messages.error(request, "There's nothing in your basket at the moment")
+            return redirect(reverse('items'))
+
+        current_basket = basket_contents(request)
+        total = current_basket['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
+
+        new_form = NewForm()
 
     if not stripe_public_key:
-        message.warning(request, 'Stripe public key missing')
+        messages.warning(request, 'Stripe public key is missing.')
 
     template = 'pay/pay.html'
     context = {
         'new_form': new_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def pay_done(request, order_number):
+            
+# Handle successful checkout
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'basket' in request.session:
+        del request.session['basket']
+
+    template = 'pay/pay_done.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
