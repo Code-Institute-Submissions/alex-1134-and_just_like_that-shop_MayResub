@@ -1,0 +1,19 @@
+Hi, {{ order.full_name }}!
+
+This is a message to confirm your order from And Just Like That Closet.
+
+Order Number: {{ order.order_number }}
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be deliverd to {{ order.street_address1 }} in {{ order.country }}.
+
+In case of any questions, you can contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+Carrie, Charlotte and Miranda ;)
