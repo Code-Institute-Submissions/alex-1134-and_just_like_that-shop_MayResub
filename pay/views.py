@@ -13,6 +13,8 @@ def pay(request):
     template = 'pay/pay.html'
     context = {
         'new_form': new_form,
+        'stripe_public_key': 'pk_test_51KXZnYAR7anLVzL844SdsfnDoxv9P3fNC3HRXxCaeHbh2wWUn3MhRBcmQnqwie5rkB8LPoongq9JUnVyBUooFSjz00rVpwV6vn',
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
