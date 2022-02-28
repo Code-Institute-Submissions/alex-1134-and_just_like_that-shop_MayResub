@@ -102,7 +102,7 @@ The Stripe card elemnt does not alwayss work.
 
 
 ### Problems
-IMPORTANT: Shortly before the deadline an authentication error appear in my terminal repository and I was not able to push all the changes. README was updated manually and on the GitHub website but all the changes in code, code comments (like credits to the code I didn't write) were not applied which will result in many errors.
+IMPORTANT: Shortly before the deadline an authentication error appear in my terminal repository and I was not able to push all the changes. README was updated manually and on the GitHub website but all the changes in code, code comments (like credits to the code I didn't write) were not applied which will result in many errors and code not wotrking properly. 
 
 
 ## Deployment
