@@ -30,7 +30,6 @@ def add_to_basket(request, item_id):
 
 
 def adjust_basket(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
 
@@ -46,7 +45,7 @@ def adjust_basket(request, item_id):
 
 
 def item_removal(request, item_id):
-    """Remove item from basket"""
+    # Remove item from basket
     try: 
         basket = request.session.get('basket', {})
         basket.pop(item_id)

@@ -2,7 +2,7 @@
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = stripe(stripePublicKey);  // could be with capital "S"
+var stripe = stripe(stripePublicKey);  
 var elements = stripe.elements();
 var style = {
     base: {
@@ -46,8 +46,6 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
-    $('#payment-form').fadeToggle(100); // delete
-    $('#loading-overlay').fadeToggle(100); // delete
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
@@ -93,8 +91,6 @@ form.addEventListener('submit', function(ev) {
                     </span>
                     <span>${result.error.message}</span>`;
                 $(errorDiv).html(html);
-                $('#payment-form').fadeToggle(100); // delete
-                $('#loading-overlay').fadeToggle(100);  // delete
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
             } else {

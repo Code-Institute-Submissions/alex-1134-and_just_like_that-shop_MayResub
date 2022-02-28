@@ -34,7 +34,6 @@ class Order(models.Model):
 
 
     def delete_total(self):
-        #self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
         self.delivery_cost = Decimal(self.order_total) * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE) / 100
         self.grand_total = Decimal(self.order_total) + Decimal(self.delivery_cost)
         self.save()

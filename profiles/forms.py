@@ -1,7 +1,7 @@
 from django import forms
 from .models import UserProfile
 
-
+# From Code Institute tutorial
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
@@ -13,7 +13,6 @@ class UserProfileForm(forms.ModelForm):
         placeholders = {
             'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',
-            'default_town_or_city': 'Town or City',
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
             'default_county': 'County, State or Locality',
