@@ -1,108 +1,150 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Milestone Project 4: Backend Development (HTML5, CSS3, JAVASCRIPT, PYTHON, DJANGO, MYSQL)
 
-Welcome alex-1134,
+The aim of this project is to design and build a front- and back-end interactive site that will allow the user to manipulate the data in the database. The user should be able to engage with the data and add / edit / delete the data on the site and purchase chosen items.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Second Hand / Vintage Store
+The idesa of this project is a second hand outlet for outfits that the three main characters wear in the HBO series "And Just Like That". "And Just Like That" is a continuation of the hit "Sex and The City" tv show and originally this store was supposed to sell outfits from both shows but since the original series finished almost twenty years ago, it was better just to focus on the outfits from the new series.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The idea is that the owner of the store collects whatever items can be found (from places like eBay, Vestiaire Collective, private collectors etc) and re-sales them on the website. It is quite hard to come across these items (but not impossible because it has been done in real life) therefore all the items in the store have quantity of 1. As the new chapter of the show was airing on HBO, every piece of wardrobe that was worn on it, becamey sold out on the spot.
 
-## Gitpod Reminders
+For each item, the User sees a screenshot from the scene where it was worn and next to it there is a photo of the "real" item.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+It is worth noticing that almost all the items that the main characters wear are high fashion, hence very high prices on the items. The postal fee is only 2% of the items' price but in this case it becomes a lot, however clothes like that cannot be delivered by standard mail, therefore the delivery fee is also used on postal insurance.
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## User Experience(UX)
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+        1. First Time Visitors Goals:
+        
+            a. A First Time Visitor should be able to identify the purpose of the site by entering the main page which clearly states the purpose that it serves. Purchases can be made with or without registration to The Closet (the shop).
 
-A blue button should appear to click: _Make Public_,
+            b. A First Time Visitor should be able to easily navigate through the website's content. The menu is clearly separated from the rest of the content in both desktop and mobiles versions and the Search Bar is available as well.
 
-Another blue button should appear to click: _Open Browser_.
+        2. Returning / Frequent Visitor Goals: 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+            a. A Returning Visitor (1) will come back for items if they find them interesting and affortable.
 
-To log into the Heroku toolbelt CLI:
+            b. A Returning Visitor (2) will come back to enjoy new contents of The Closet, possibly to buy more items if they can afford it. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+            c. A Returning Visitor (3) will come back for both options 1 and 2. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+ ### Design
 
-## Release History
+    1. Colour Scheme
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+        Lively colours are used to reflect the vibe of the show and the characters. They always wear design that are "out there".
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Wireframes
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* [1](media/wire.jpg)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Features
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* Responsive on all device sizes.
+* Interactive elements, will serve its purpose with or without the user's input and engagement.
+* Stripe payments
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Technologies used
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    Google Fonts
+    Font Awesome
+    GitHub
+    Heroku
+    Query 
+    Stripe
+    MySQL
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+ ### Languages Used
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* HTML
+* CSS
+ * JAVASCRIPT
+ * Python
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Code Testing
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    Payments were tested here:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+     * [Test 1](images/order-db.png)
+     * [Test 2](images/payment-yes.png)
+     
+    
 
-------
+## Browser Compatibility Testing
+  
+   * The Website was tested on Google Chrome, Safari, Internet Explorer and Firefox browsers.
 
-## FAQ about the uptime script
+   * It was also viewed on different devices such as PCs, mobile phones, different models of iPhones, tablets, iPads and laptops.
 
-**Why have you added this script?**
+   * Hyperlinks were tested
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Manual Testing
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  In order to make sure that everything works fine on the website a series of tests was conducted:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+   * Every link in both Logged In / Logged Out option was checked
+   * Recipes were added
+   * Every link on the page was clicked on to make sure they work
 
-**So….?**
+   Not all tests were passed. Theyrare to be fixed.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Existing Bugs
 
-**Can I opt out?**
+The Stripe card elemnt does not alwayss work.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Problems
+IMPORTANT: Shortly before the deadline an authentication error appear in my terminal repository and I was not able to push all the changes. README was updated manually and on the GitHub website but all the changes in code, code comments (like credits to the code I didn't write) were not applied which will result in many errors.
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Deployment
 
----
+  The website was deployed on Heroku. In order to do so, I logged into my GitHub account, found the repository and then connected my GitHub account to my Heroku account and deployed it from there
 
-Happy coding!
+  In order to clone this project and run it locally: 
+   * log into GitHub account (using Chrome) 
+   * install Gitpod extensions for Chrome 
+   * restart the browser
+   * go to the project's repository
+   * click on the green Gitpod button - this will open a new workspace that will enable to work on the code locally
+
+
+## Future Features
+
+* UX improvements for readability
+* Adding more characters from the show to the website
+* Co-operation with the Instagram account where photos were found
+
+
+## Credits
+
+To create my project I followed the Boutique Ado Project from Code Institute (bigger code dependencies are marked in the project) and also I watched the tutorials listed below.
+
+https://www.youtube.com/watch?v=yOmxJbZjTnU
+https://www.youtube.com/watch?v=M7PR-Qs50EA
+https://www.youtube.com/watch?v=41NOoEz3Tzc
+
+Creating SKU's:
+https://fitsmallbusiness.com/sku-numbers/
+
+
+All the photos in The Closet come from:
+https://www.instagram.com/justlikethatcloset/
+
+Background photo:
+https://www.apartmenttherapy.com/sex-and-the-city-carrie-bradshaw-apartment-2018-259443
+
+
+## Access:
+Superuser: alex-1134
+Password: dennispapi
+
+
