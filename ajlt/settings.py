@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 
 """
 Django settings for ajlt project.
@@ -120,12 +121,15 @@ WSGI_APPLICATION = 'ajlt.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+ }
 
+# DATABASES = {
+ #    'default': dj_database_url.parse('postgres://pbxagyvcrlsztm:c06ed9e72f851c53c7087048b357aa3f387d2944e85fb0fa8e0c41d7cd664fe3@ec2-54-216-17-9.eu-west-1.compute.amazonaws.com:5432/de4i37khnnuses')
+# {}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
