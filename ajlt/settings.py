@@ -121,15 +121,15 @@ WSGI_APPLICATION = 'ajlt.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
- }
+ 'default': {
+     'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': BASE_DIR / 'db.sqlite3',
+  }
+}
 
-# DATABASES = {
- #    'default': dj_database_url.parse('postgres://pbxagyvcrlsztm:c06ed9e72f851c53c7087048b357aa3f387d2944e85fb0fa8e0c41d7cd664fe3@ec2-54-216-17-9.eu-west-1.compute.amazonaws.com:5432/de4i37khnnuses')
-# {}
+DATABASES = {
+    'default': dj_database_url.parse('postgres://voaafckgbfdnnq:947cc99b3b0f23fa516b05e02905e208de1c646e26d7f3b9d770b3bd1d0a28d4@ec2-63-32-7-190.eu-west-1.compute.amazonaws.com:5432/d9ajst9p2i9qbq')}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
