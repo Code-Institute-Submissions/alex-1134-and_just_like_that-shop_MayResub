@@ -184,8 +184,8 @@ a.category-badge > span.badge:hover {
 /*...................... Allauth */
 
 .allauth-form-inner-content p {
-    margin-top: 2rem;
-    color: #85bdee; 
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -227,8 +227,8 @@ a.category-badge > span.badge:hover {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: rgb(243, 197, 197);
-    border-color: rgb(233, 103, 103);
+    background-color: #222;
+    border-color: #222;
 }
 
 .allauth-form-inner-content a {
