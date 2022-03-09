@@ -132,8 +132,8 @@ else:
         }
     }
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://voaafckgbfdnnq:947cc99b3b0f23fa516b05e02905e208de1c646e26d7f3b9d770b3bd1d0a28d4@ec2-63-32-7-190.eu-west-1.compute.amazonaws.com:5432/d9ajst9p2i9qbq')}
+#DATABASES = {
+#   'default': dj_database_url.parse('postgres://voaafckgbfdnnq:947cc99b3b0f23fa516b05e02905e208de1c646e26d7f3b9d770b3bd1d0a28d4@ec2-63-32-7-190.eu-west-1.compute.amazonaws.com:5432/d9ajst9p2i9qbq')}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -179,7 +179,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ((os.path.join(BASE_DIR, 'static')),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
