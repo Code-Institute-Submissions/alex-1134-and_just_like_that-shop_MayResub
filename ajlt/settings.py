@@ -120,12 +120,17 @@ WSGI_APPLICATION = 'ajlt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-# 'default': {
-#      'ENGINE': 'django.db.backends.sqlite3',
-#       'NAME': BASE_DIR / 'db.sqlite3',
-#   }
-# }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+             'ENGINE': 'django.db.backends.sqlite3',
+             'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 DATABASES = {
     'default': dj_database_url.parse('postgres://voaafckgbfdnnq:947cc99b3b0f23fa516b05e02905e208de1c646e26d7f3b9d770b3bd1d0a28d4@ec2-63-32-7-190.eu-west-1.compute.amazonaws.com:5432/d9ajst9p2i9qbq')}
