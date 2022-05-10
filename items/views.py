@@ -1,6 +1,8 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Item, Category
 from .forms import ItemForm
 
@@ -65,8 +67,13 @@ def item_detail(request, item_id):
     return render(request, 'items/item_detail.html', context)
 
 
+@login_required
 def add_item(request):
     """ Add an item to the Closet """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only store owner can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ItemForm(request.POST, request.FILES)
         if form.is_valid():
