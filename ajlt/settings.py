@@ -111,7 +111,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_ONCE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/accounts/email_confirm'
+LOGIN_REDIRECT_URL = ''
 
 WSGI_APPLICATION = 'ajlt.wsgi.application'
 
