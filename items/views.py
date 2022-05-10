@@ -2,6 +2,7 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Item, Category
+from .forms import ItemForm
 
 
 def all_items(request):
@@ -62,3 +63,24 @@ def item_detail(request, item_id):
     }
 
     return render(request, 'items/item_detail.html', context)
+
+
+def add_item(request):
+    """ Add an item to the Closet """
+    if request.method == 'POST':
+        form = ItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Item has been added!')
+            return redirect(reverse('add_item'))
+        else:
+            messages.error(request, 'Failed to add')
+    else:
+        form = ItemForm()
+        
+    template = 'items/add_item.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
