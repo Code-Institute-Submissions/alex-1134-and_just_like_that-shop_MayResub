@@ -2,7 +2,7 @@
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = stripe(stripePublicKey);  
+var stripe = Stripe(stripePublicKey);  
 var elements = stripe.elements();
 var style = {
     base: {
@@ -85,7 +85,7 @@ form.addEventListener('submit', function(ev) {
         }).then(function(result) {
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
-             var html = `
+                var html = `
                     <span class="icon" role="alert">
                     <i class="fas fa-times"></i>
                     </span>
