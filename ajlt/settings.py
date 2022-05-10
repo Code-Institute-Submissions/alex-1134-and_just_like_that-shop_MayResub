@@ -111,7 +111,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_ONCE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/accounts/email_confirm/'
 
 WSGI_APPLICATION = 'ajlt.wsgi.application'
 
@@ -216,7 +216,7 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51KXZnYAR7anLVzL844S
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51KXZnYAR7anLVzL8bnicxAfl4Kwk5ya5IMyFZ5NP9e8rbFQFTu5FYRnmRh3uFW9PJPF4P02psSzNINDgj776HgSd00lnuOtBXh')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
-if 'DEVELOPMENT' in os.environ:
+if 'DEVELOPMENT' in settings:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'ajlt@example.com'
 else:
