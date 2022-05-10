@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 from .forms import NewForm
 from .models import Order, OrderLineItem
@@ -129,7 +130,7 @@ def pay(request):
 
     return render(request, template, context)
 
-
+@login_required
 def pay_done(request, order_number):
             
 # Handle successful checkout
