@@ -136,7 +136,7 @@ def pay_done(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
-    profile = UserProfile.object.get(user=request.user)
+    profile = UserProfile.objects.get(user=request.user)
     order.user_profile = profile
     order.save()
 
