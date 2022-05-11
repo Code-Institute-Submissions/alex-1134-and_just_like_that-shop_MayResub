@@ -208,7 +208,6 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 
-
 # stripe payments
 STANDARD_DELIVERY_PERCENTAGE = 2
 STRIPE_CURRENCY = 'sek'
