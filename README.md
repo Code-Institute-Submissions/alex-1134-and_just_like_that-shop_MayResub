@@ -137,7 +137,7 @@ Payments were tested here:
    * go to the project's repository
    * click on the green Gitpod button - this will open a new workspace that will enable to work on the code locally
      
-  Due to problems      with Heroku, automatic deploys are not possible these days, therefore these steps have to be followed to deploy a project (f     ound in Code Institute's Slack group):
+  Due to problems with Heroku, automatic deploys are not possible these days, therefore these steps have to be followed to deploy a project (found in Code Institute's Slack group):
     * [Deployment 1](media/deploy-1.jpg)
     * [Deployment 2](media/deploy-2.jpg)
    
@@ -152,9 +152,9 @@ Payments were tested here:
   
 To create my code I followed the Boutique Ado Project from Code Institute and also I watched the tutorials listed below.
  
-htt ps://www.youtube.com/watch?v=yOmxJbZjTnU
-ht tps://www.youtube.com/watch?v=M7PR-Qs50EA
-h ttps://www.youtube.com/watch?v=41NOoEz3Tzc
+https://www.youtube.com/watch?v=yOmxJbZjTnU
+https://www.youtube.com/watch?v=M7PR-Qs50EA
+https://www.youtube.com/watch?v=41NOoEz3Tzc
  
 Creating SKU's: 
 https://fitsmallbusiness.com/sku-numbers/
