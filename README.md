@@ -57,6 +57,7 @@ It is worth noticing that almost all the items that the main characters wear are
     Query 
     Stripe
     MySQL
+    AWS
 
 
  ### Languages Used
@@ -70,8 +71,7 @@ It is worth noticing that almost all the items that the main characters wear are
 
     Payments were tested here:
 
-     * [Test 1](images/order-db.png)
-     * [Test 2](images/payment-yes.png)
+     * [Test 1](media/payment-confirmation.jpg)
      
     
 
