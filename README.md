@@ -152,21 +152,21 @@ Payments were tested here:
   
 To create my code I followed the Boutique Ado Project from Code Institute and also I watched the tutorials listed below.
  
-https://www.youtube.com/watch?v=yOmxJbZjTnU
-https://www.youtube.com/watch?v=M7PR-Qs50EA
-https://www.youtube.com/watch?v=41NOoEz3Tzc
+* https://www.youtube.com/watch?v=yOmxJbZjTnU
+* https://www.youtube.com/watch?v=M7PR-Qs50EA
+* https://www.youtube.com/watch?v=41NOoEz3Tzc
  
 Creating SKU's: 
-https://fitsmallbusiness.com/sku-numbers/
+* https://fitsmallbusiness.com/sku-numbers/
      
      
 All the photos in The Closet come from:
-https://www.instagram.com/justlikethatcloset/
+* https://www.instagram.com/justlikethatcloset/
     
 Background photo:
-https://www.apartmenttherapy.com/sex-and-the-city-carrie-bradshaw-apartment-2018-259443
+* https://www.apartmenttherapy.com/sex-and-the-city-carrie-bradshaw-apartment-2018-259443
     
 Additional help:     
-https://stackoverflow.com/
-https://reddit.com
-Code Institute Tutoring 
+* https://stackoverflow.com/
+* https://reddit.com
+* Code Institute Tutoring 
