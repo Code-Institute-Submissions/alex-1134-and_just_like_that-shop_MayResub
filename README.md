@@ -18,23 +18,23 @@ Password - admin
 
 ## User Experience(UX)
 
-        1. Users can access all items choosing by a character, they can also sort them in different ways. Since all items are in quantiny of one and it's a small store, sold items are not removed but kept for display. When rating items from high to low, we saw the unrated items first because they are still avaialable (therefore not rated) and we want to push slaes of them. For the purpose of showing that rating works, I manually changed ratings of some items.
+    1. Users can access all items choosing by a character, they can also sort them in different ways. Since all items are in quantiny of one and it's a small store, sold items are not removed but kept for display. When rating items from high to low, we saw the unrated items first because they are still avaialable (therefore not rated) and we want to push slaes of them. For the purpose of showing that rating works, I manually changed ratings of some items.
 
 ### User Stories
 
-        1. First Time Visitors Goals:
+     1. First Time Visitors Goals:
         
-            a. A First Time Visitor should be able to identify the purpose of the site by entering the main page which clearly states the purpose that it serves. Purchases can be made with or without registration to The Closet (the shop).
+        a. A First Time Visitor should be able to identify the purpose of the site by entering the main page which clearly states the purpose that it serves. Purchases can be made with or without registration to The Closet (the shop).
 
-            b. A First Time Visitor should be able to easily navigate through the website's content. The menu is clearly separated from the rest of the content in both desktop and mobiles versions and the Search Bar is available as well.
+        b. A First Time Visitor should be able to easily navigate through the website's content. The menu is clearly separated from the rest of the content in both desktop and mobiles versions and the Search Bar is available as well.
 
-        2. Returning / Frequent Visitor Goals: 
+    2. Returning / Frequent Visitor Goals: 
 
-            a. A Returning Visitor (1) will come back for items if they find them interesting and affortable.
+        a. A Returning Visitor (1) will come back for items if they find them interesting and affortable.
 
-            b. A Returning Visitor (2) will come back to enjoy new contents of The Closet, possibly to buy more items if they can afford it. 
+        b. A Returning Visitor (2) will come back to enjoy new contents of The Closet, possibly to buy more items if they can afford it. 
 
-            c. A Returning Visitor (3) will come back for both options 1 and 2. 
+        c. A Returning Visitor (3) will come back for both options 1 and 2. 
 
 ### Customer Stories
 [Customer Stories](media/customer-stories.jpg)
@@ -43,9 +43,14 @@ Password - admin
  
  ### Design
 
-    1. Colour Scheme
+1. Colour Scheme
 
-        Lively colours are used to reflect the vibe of the show and the characters. They always wear design that are "out there".
+    Lively colours are used to reflect the vibe of the show and the characters. They always wear design that are "out there".
+    There is a lot of pink on the page - it's a colour that is kind of a theme for the show.
+
+2. The website is easy to naviagte, changes layout depending on which device is being used.
+
+3. Easy to navigate - User can choose items by a character, sorting or use a search option.
 
 
 ### Wireframes
@@ -133,7 +138,7 @@ Password - admin
    * click on the green Gitpod button - this will open a new workspace that will enable to work on the code locally
      
   Due to problems      with Heroku, automatic deploys are not possible these days, therefore these steps have to be followed to deploy a project (f     ound in Code Institute's Slack group):
-    * [D eployment 1](media/deploy-1.jpg)
+    * [Deployment 1](media/deploy-1.jpg)
     * [Deployment 2](media/deploy-2.jpg)
    
 # # Future Features
