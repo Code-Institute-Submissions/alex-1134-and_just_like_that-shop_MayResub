@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-+@mauyg!ro@j0m2)7^g5nhd))2o0%@ew5@')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ajlt-closet.herokuapp.com', 'localhost']
 
@@ -131,7 +131,7 @@ else:
         }
     }
 
-#DATABASES = {
+# DATABASES = {
 #   'default': dj_database_url.parse('postgres://voaafckgbfdnnq:947cc99b3b0f23fa516b05e02905e208de1c646e26d7f3b9d770b3bd1d0a28d4@ec2-63-32-7-190.eu-west-1.compute.amazonaws.com:5432/d9ajst9p2i9qbq')}
 
 # Password validation
@@ -185,13 +185,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
-    #caching
+    # caching
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
 
-    #bucket control
+    # bucket control
     AWS_STORAGE_BUCKET_NAME = 'ajlt'
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -209,11 +209,11 @@ if 'USE_AWS' in os.environ:
 
 
 
-#stripe payments
+# stripe payments
 STANDARD_DELIVERY_PERCENTAGE = 2
 STRIPE_CURRENCY = 'sek'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', 'pk_test_51KXZnYAR7anLVzL844SdsfnDoxv9P3fNC3HRXxCaeHbh2wWUn3MhRBcmQnqwie5rkB8LPoongq9JUnVyBUooFSjz00rVpwV6vn')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51KXZnYAR7anLVzL8bnicxAfl4Kwk5ya5IMyFZ5NP9e8rbFQFTu5FYRnmRh3uFW9PJPF4P02psSzNINDgj776HgSd00lnuOtBXh')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 

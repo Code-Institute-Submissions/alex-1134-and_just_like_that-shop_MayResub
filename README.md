@@ -82,7 +82,8 @@ Password - admin
 
 ## Code Testing
 
-    
+  No errors in the workspace:
+  [Warnings](media/warnings.jpg)
     
 
 ## Browser Compatibility Testing
@@ -116,47 +117,49 @@ Password - admin
 
     I had some problems with the register function and everytime when I changed small things to see if it works, I commented the commit "test". That's why there are so many "test" commits - they are commits with very, very small changes, like removing a comma or a word.
 
+    After registering we get redirected to a page that seems to have nothing on it, but there is content under the header. We also get an email asking us to confirm registration:
+[check here](media/bug1.jpg), so it works but the problem is that on this one particular page I can't change anything. When I try to    find "confirm-email" in my workspace, I get no results. So that's a feature that needs fixing but the registration functionality itself works. I tried sorting this out in many different ways, contacted Tutoring and since I ran out of time, I can just mention this here in README. 
 
 
 ## Deployment
 
-  The websi                                                                                                                                                                 te was deployed on Heroku. In order to do so, I logged into my GitHub account, found the repository and then connected my Git      Hub account to my Heroku account and deployed it from there
+  The website was deployed on Heroku. In order to do so, I logged into my GitHub account, found the repository and then connected my Gitub account to my Heroku account and deployed it from there.
      
-  In order to clone this proje    ct and run it locally: 
-   * log into GitHub acco     unt (using Chrome) 
-   * install Gitpod      extensions for Chrome 
-   * restart th     e browser
-   * go to      the project's repository
-   *      click on the green Gitpod button - this will open a new workspace that will enable to work on the code locally
+  In order to clone this project and run it locally: 
+   * log into GitHub account (using Chrome) 
+   * install Gitpod extensions for Chrome 
+   * restart the browser
+   * go to the project's repository
+   * click on the green Gitpod button - this will open a new workspace that will enable to work on the code locally
      
   Due to problems      with Heroku, automatic deploys are not possible these days, therefore these steps have to be followed to deploy a project (f     ound in Code Institute's Slack group):
-    * [D    eployment 1](media/deploy-1.jpg)
-         * [Deployment 2](media/deploy-2.jpg)
+    * [D eployment 1](media/deploy-1.jpg)
+    * [Deployment 2](media/deploy-2.jpg)
    
 # # Future Features
  
 * UX  improvements for readability
 * Ad ding more characters from the show to the website
 * C o-operation with the Instagram account where photos were found
-*  Adding fronted stock managemnt - since the idea of the website is to be a small shop ran by one person, managing in through backend   s eems good enough. If the shop were ever to grow and needed easier navigation - the settings are already there in AWS.
+* Adding fronted stock managemnt - since the idea of the website is to be a small shop ran by one person, managing in through backend   s eems good enough. If the shop were ever to grow and needed easier navigation - the settings are already there in AWS.
  
 ##  Credits
   
-T o create my code I followed the Boutique Ado Project from Code Institute and also I watched the tutorials listed below.
+To create my code I followed the Boutique Ado Project from Code Institute and also I watched the tutorials listed below.
  
 htt ps://www.youtube.com/watch?v=yOmxJbZjTnU
 ht tps://www.youtube.com/watch?v=M7PR-Qs50EA
 h ttps://www.youtube.com/watch?v=41NOoEz3Tzc
  
 Creating SKU's: 
-https                ://fitsmallbusiness.com/sku-numbers/
+https://fitsmallbusiness.com/sku-numbers/
      
      
-All the p    hotos in The Closet come from:
-http     s://www.instagram.com/justlikethatcloset/
+All the photos in The Closet come from:
+https://www.instagram.com/justlikethatcloset/
     
-Backgrou     nd photo:
-http    s://www.apartmenttherapy.com/sex-and-the-city-carrie-bradshaw-apartment-2018-259443
+Background photo:
+https://www.apartmenttherapy.com/sex-and-the-city-carrie-bradshaw-apartment-2018-259443
     
 Additional help:     
 https://stackoverflow.com/
