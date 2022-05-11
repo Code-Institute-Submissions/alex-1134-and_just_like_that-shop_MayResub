@@ -72,7 +72,9 @@ It is worth noticing that almost all the items that the main characters wear are
     Payments were tested here:
 
      * [Test 1](media/payment-confirmation.jpg)
-     
+
+    Email servis / password change (emails come from my google account "me.coding.bee@gmail.com")
+     *[Test 2](images/password-change.jpg)
     
 
 ## Browser Compatibility Testing
