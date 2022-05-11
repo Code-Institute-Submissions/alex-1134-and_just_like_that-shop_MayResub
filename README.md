@@ -103,20 +103,20 @@ Password - admin
 
 ## Manual Testing
 
-  In order to make sure that everything works fine on the website a series of tests was conducted:
+In order to make sure that everything works fine on the website a series of tests was conducted:
 
-   * Every link in both Logged In / Logged Out option was checked
-   * New users and stock items were added, removed or edited.
-   * Every link on the page was clicked on to make sure they work
+* Every link in both Logged In / Logged Out option was checked
+* New users and stock items were added, removed or edited.
+* Every link on the page was clicked on to make sure they work
 
-    Payments were tested here:
+Payments were tested here:
 
-    * [Test 1](media/payment-confirmation.jpg)
+* [Test 1](media/payment-confirmation.jpg)
 
-    Email servis / password change (emails come from my google account "me.coding.bee@gmail.com")
-    * [Test 2](media/password-change.jpg)
-    * [Test 3](media/email-confirm.jpg)
-    * [Test 4](media/email-confirm2.jpg)
+ Email servis / password change (emails come from my google account "me.coding.bee@gmail.com")
+* [Test 2](media/password-change.jpg)
+* [Test 3](media/email-confirm.jpg)
+* [Test 4](media/email-confirm2.jpg)
 
 ### Existing Bugs
 
